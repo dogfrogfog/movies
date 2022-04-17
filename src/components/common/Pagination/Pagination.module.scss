@@ -1,0 +1,91 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px 0;
+
+  @media screen and (min-width: 300px) and (max-width: 800px) {
+    width: 320px;
+  }
+
+  .allItems {
+    margin-left: 25px;
+
+    @media screen and (min-width: 300px) and (max-width: 800px) {
+      display: none;
+    }
+  }
+
+  .currentPage {
+    color: #ffffff;
+    width: 21px;
+    height: 25px;
+    background: #0064EB;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 22px;
+  }
+
+
+  .page {
+    position: static;
+    width: 7px;
+    height: 21px;
+    font-size: 14px;
+    line-height: 21px;
+    margin-left: 22px;
+    cursor: pointer;
+
+    &:hover {
+      color: #0064EB;
+      transition: linear 0.6s ease-out;
+    }
+  }
+
+  .prevButton {
+    background: transparent;
+    margin-left: 20px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    padding: 3px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(135deg);
+    cursor: pointer;
+
+    &:hover {
+      border: solid #0064EB;
+      border-width: 0 3px 3px 0;
+      display: inline-block;
+      padding: 3px;
+      transform: rotate(-45deg);
+      -webkit-transform: rotate(135deg);
+      cursor: pointer;
+    }
+  }
+
+  .nextButton {
+    background: transparent;
+    margin: 0 76px 0 23px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(-45deg);
+    cursor: pointer;
+
+    &:hover {
+      border: solid #0064EB;
+      border-width: 0 3px 3px 0;
+      display: inline-block;
+      padding: 3px;
+      transform: rotate(45deg);
+      -webkit-transform: rotate(-45deg);
+      cursor: pointer;
+    }
+  }
+}
