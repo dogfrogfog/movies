@@ -9,7 +9,7 @@ interface QueryArgument {
 
 export const moviesApi = createApi({
   reducerPath: 'movies',
-  baseQuery: fetchBaseQuery({ baseUrl: 'http://www.omdbapi.com/' }),
+  baseQuery: fetchBaseQuery({ baseUrl: 'https://www.omdbapi.com/' }),
   endpoints: (builder) => ({
     searchMovie: builder.query<Response, QueryArgument>({
       query: ({ title, pageNumber }) => ({
