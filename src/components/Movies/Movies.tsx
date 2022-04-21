@@ -41,7 +41,7 @@ export const Movies = () => {
           <MovieCard key={imdbID} title={Title} year={Year} poster={Poster} imdbID={imdbID} />
         ))}
       </div>
-      <Pagination items={Number(data?.totalResults)} perPage={9} />
+      <Pagination items={Number(data?.totalResults)} perPage={10} />
     </div>
   );
 };

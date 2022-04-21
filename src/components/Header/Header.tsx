@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { moviesActions } from '../../redux/movies/moviesSlice';
 
 import styles from './Header.module.scss';
+import { paginationActions } from '../../redux/pagination/paginationSlice';
 
 export const Header = () => {
   const dispatch = useDispatch();
@@ -11,6 +12,9 @@ export const Header = () => {
   const onChange = (event: ChangeEvent<HTMLInputElement>) => {
     const debounce = setTimeout(() => {
       dispatch(moviesActions.setSearchTitle(event.target.value.trim()));
+      dispatch(paginationActions.setCurrentPage(1))
+      dispatch(paginationActions.setMaxPageNumberLimit(5));
+      dispatch(paginationActions.setMinPageNumberLimit(0));
     }, 500);
 
     return () => {
