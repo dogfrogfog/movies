@@ -1,3 +1,4 @@
+// notFoundPhoto
 import noPhoto from '../../../images/noPhoto.jpg';
 
 import styles from './MovieCard.module.scss';
@@ -10,6 +11,7 @@ type Props = {
 };
 
 export const MovieCard = ({ title, poster, year, imdbID }: Props) => {
+  // так нельзя делать, если тебе нужно открыть ссылку - для этого есть тег <a></a> )
   const handleClick = () => {
     window.open(`https://www.imdb.com/title/${imdbID}`);
   };

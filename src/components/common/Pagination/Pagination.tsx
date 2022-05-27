@@ -41,6 +41,9 @@ export const Pagination = ({ items, perPage }: Props) => {
     dispatch(paginationActions.setMinPageNumberLimit(minPageNumberLimit));
   };
 
+  // по сути 5 почти одинаковых функций, можно сделать 1-2 и лимиты по страницам закинуть в какой-то конфиг
+  // все это может работать под капотом в редьюсере и не обязательно выноситть это на уровент компонента
+  // тогда возможно даже экшены setMinPageNumberLimit и setMaxPageNumberLimit не нужны будут
   const onPrevButtonClick = () => {
     setCurrentPage(currentPage - 1);
     if ((currentPage - 1) % pageNumberLimit === 0) {
@@ -49,6 +52,7 @@ export const Pagination = ({ items, perPage }: Props) => {
     }
   };
 
+  // handleNextButtonClick ? ну это вкусовщина
   const onNextButtonClick = () => {
     setCurrentPage(currentPage + 1);
     if (currentPage + 1 > maxPageNumberLimit) {
@@ -82,6 +86,7 @@ export const Pagination = ({ items, perPage }: Props) => {
   return (
     <div className={styles.container}>
       <span className={styles.allItems}>
+        {/* что-то магическое, понятные простые условия вынести в константу, со значениями так же */}
         {currentPage === 1 ? 1 : (currentPage - 1) * perPage + 1}-
         {currentPage * perPage > items ? items : currentPage * perPage} of {items} items
       </span>

@@ -21,6 +21,7 @@ export const Movies = () => {
 
   if (data?.Error) {
     return (
+      //  стили в файлах
       <h2 style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: 'calc(100% - 80px)' }}>
         {data?.Error}
       </h2>

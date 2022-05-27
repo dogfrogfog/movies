@@ -1,5 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
+// есть файл с типами, какой в нем смысл если типы объявляются прямо в файле
+// IMoviesState более явно как-то
 interface IMovies {
   searchTitle: string;
 }

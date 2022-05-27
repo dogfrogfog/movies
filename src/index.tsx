@@ -8,6 +8,7 @@ import './index.scss';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
+  // import { StrictMode } from 'react'; <React.StrictMode> -> <StrictMode>
   <React.StrictMode>
     <Provider store={store}>
       <App />
